@@ -53,6 +53,25 @@ const getAstronomyPictureOfTheDay = async () => {
   }
 };
 
+// NASA API 예시 함수: Astronomy Picture of the Day (APOD)
+export const getInsightWeatherData = async () => {
+  console.log(NASA_API_KEY);
+try {
+  const response = await axios.get(`${NASA_BASE_URL}/insight_weather`, {
+    params: {
+      api_key: NASA_API_KEY,
+      feedtype: 'json',
+      ver: 1.0
+    }
+  });
+  console.log(response.data);
+  return response.data; // 데이터를 반환 -> [{test: dddd}, {test: yyyy}]
+} catch (error) {
+  console.error('NASA API 호출 에러:', error.message);
+  throw error;
+}
+};
+
 const saveApods = async (data) => { //  saveApod-> 몽고디비
   try {
     const result = APOD.insertMany(data);

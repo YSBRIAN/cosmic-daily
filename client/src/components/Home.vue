@@ -51,7 +51,7 @@
         },
         updateBackground() {
             document.body.style.backgroundImage = `url(${this.imageUrl})`;
-            document.body.style.backgroundSize = "contain";
+            document.body.style.backgroundSize = "cover";
             document.body.style.backgroundPosition = "center";
             document.body.style.backgroundRepeat = "no-repeat";
         }
