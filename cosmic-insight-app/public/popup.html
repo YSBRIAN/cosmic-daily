@@ -1,0 +1,46 @@
+<!-- public/popup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Minimal Extension</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      width: 300px; /* 팝업 너비 */
+      font-family: Arial, sans-serif;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">Minimal NASA APOD Viewer</div>
+  <div id="image-container">
+    <!-- NASA 이미지가 표시될 영역 -->
+  </div>
+  <button id="reload-btn">이미지 다시 불러오기</button>
+
+  <script src="../src/popup.js" type="module"></script>
+</body>
+</html>
